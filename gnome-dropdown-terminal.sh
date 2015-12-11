@@ -1,3 +1,4 @@
+#!/bin/bash
 wid=$(xdotool search --class dropdown | tail -n1)
 if [ -z "$wid" ]; then
     gnome-terminal -e 'conky -c /home/sergio/.conkyrc_ncurses'
