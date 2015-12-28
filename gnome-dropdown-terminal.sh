@@ -2,7 +2,7 @@
 wid=$(cat /tmp/.terminal-wid)
 
 if [ -z "$wid" ]; then
-    gnome-terminal -e 'conky -c /home/sergio/.conkyrc_ncurses'
+    gnome-terminal --profile="Gruvbox Dark" -e 'conky -c /home/sergio/.conkyrc_ncurses'
     wid=$(xdotool search --class gnome-terminal | tail -n1)
     xdotool set_window --class dropdown "$wid" windowmove "$wid" 0 0 windowsize "$wid" x 50%
     wmctrl -i -r "$wid" -b add,maximized_horz,above
